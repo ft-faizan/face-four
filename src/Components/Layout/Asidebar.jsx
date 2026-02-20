@@ -22,7 +22,7 @@ function Asidebar() {
         />
 
         <h1 className="text-xl md:text-2xl font-semibold tracking-[-0.04em] text-[black] dark:text-white  absolute left-15 md:left-17">
-          Track<span className="text-[#2840E1]">.</span>
+          Track<span className="text-[#2840E1] dark:text-[#27272A]">.</span>
         </h1>
       </div>
 

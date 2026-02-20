@@ -194,7 +194,7 @@ function AccountCard({ account, onEdit }) {
               onEdit(account);
               setOpenMenu(false);
             }}
-            className="block w-full text-left px-4 py-2  rounded-xl hover:bg-[#3041DC] hover:text-white   cursor-pointer"
+            className="block w-full text-left px-4 py-2  rounded-xl hover:bg-[#3041DC] hover:text-white  dark:hover:bg-[#5D5D62] cursor-pointer"
           >
             <div className="flex items-center gap-1">
               <MdDriveFileRenameOutline size={20} />
@@ -207,7 +207,7 @@ function AccountCard({ account, onEdit }) {
               dispatch(togglePin(account.id));
               setOpenMenu(false);
             }}
-            className="block w-full text-left px-4 py-2  rounded-xl hover:bg-[#3041DC] hover:text-white  cursor-pointer"
+            className="block w-full text-left px-4 py-2  rounded-xl hover:bg-[#3041DC] hover:text-white dark:hover:bg-[#5D5D62]  cursor-pointer"
           >
             
             {account.isPinned ? (
@@ -241,7 +241,7 @@ function AccountCard({ account, onEdit }) {
               dispatch(toggleArchive(account.id));
               setOpenMenu(false);
             }}
-            className="flex items-center gap-2 w-full text-left px-4 py-2 rounded-xl hover:bg-[#3041DC] hover:text-white  cursor-pointer"
+            className="flex items-center gap-2 w-full text-left px-4 py-2 rounded-xl hover:bg-[#3041DC] hover:text-white dark:hover:bg-[#5D5D62]  cursor-pointer"
           >
             {account.isArchived ? (
               <>

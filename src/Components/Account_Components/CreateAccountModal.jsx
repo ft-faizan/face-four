@@ -87,11 +87,11 @@ function CreateAccountModal({ isOpen, onClose, editingAccount }) {
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-[1000] p-4">
       <div className="bg-white dark:bg-[#2D2E32]  rounded-2xl shadow-2xl w-full max-w-md mx-auto relative z-50 overflow-hidden">
-        <div className="bg-[#235FF6] px-6 py-4">
+        <div className="bg-[#3041DC] dark:bg-[#27272A] px-6 py-4">
           <h2 className="text-xl font-semibold text-white">
             {editingAccount ? "Edit Account" : "Create New Account"}
           </h2>
-          <p className="text-blue-100 text-sm mt-1">
+          <p className="text-[#ADB2E3] dark:text-[#c0c0ce] text-sm mt-1">
             {editingAccount
               ? "Update your account details below"
               : "Fill in the information to create a new account"}
@@ -107,17 +107,17 @@ function CreateAccountModal({ isOpen, onClose, editingAccount }) {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
-              className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all duration-200 text-gray-700 dark:text-white placeholder-gray-400"
+              className="w-full px-4 py-3 border border-gray-200 rounded-lg   text-gray-700 dark:text-white placeholder-gray-400"
               placeholder="Enter account name"
               autoFocus
             />
           </div>
 
           <div className="space-y-4 mb-5">
-            <div className="flex items-center justify-between p-3 bg-[#EFF6FE] dark:bg-[#707075] rounded-lg   ">
+            <div className="flex items-center justify-between p-3 bg-[#ADB2E3] dark:bg-[#707075] rounded-lg   ">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#DBEAFD] rounded-full flex items-center justify-center">
-                   <VscFolderActive size={20} className="text-[#235FF6]" />
+                <div className="w-8 h-8 bg-[#DBEAFD] dark:bg-[#E5E7EB] rounded-full flex items-center justify-center">
+                   <VscFolderActive size={20} className="text-[#3041DC] dark:text-[#838384]" />
                 </div>
                 <div>
                   <p className="font-medium text-gray-700 dark:text-white">
@@ -135,14 +135,14 @@ function CreateAccountModal({ isOpen, onClose, editingAccount }) {
                   onChange={() => setIsArchived(!isArchived)}
                   className="sr-only peer"
                 />
-                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600 "></div>
               </label>
             </div>
 
-            <div className="flex items-center justify-between p-3 bg-[#EFF6FE] dark:bg-[#707075] rounded-lg">
+            <div className="flex items-center justify-between p-3 bg-[#ADB2E3] dark:bg-[#707075] rounded-lg">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-[#DBEAFD] rounded-full flex items-center justify-center">
-                  <TiPin size={20} className="text-[#235FF6]" />
+                <div className="w-8 h-8 bg-[#DBEAFD] dark:bg-[#E5E7EB] rounded-full flex items-center justify-center">
+                  <TiPin size={20} className="text-[#3041DC] dark:text-[#838384]" />
                 </div>
                 <div>
                   <p className="font-medium text-gray-700 dark:text-white">
@@ -193,7 +193,7 @@ function CreateAccountModal({ isOpen, onClose, editingAccount }) {
             </button>
             <button
               onClick={handleSubmit}
-              className="px-6 py-3 bg-[#235FF6] text-white rounded-lg hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 transition-all duration-200 font-medium order-1 sm:order-2"
+              className="px-6 py-3 bg-[#3041DC] dark:bg-[#27272A] text-white rounded-lg hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 transition-all duration-200 font-medium order-1 sm:order-2"
             >
               {editingAccount ? (
                 <span className="flex items-center justify-center gap-2">

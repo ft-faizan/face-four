@@ -1,8 +1,18 @@
 import ThemeToggle from "./Moad";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 function Navbar() {
-    const location = useLocation();
+  const location = useLocation();
+  const { id } = useParams(); 
+  const account = useSelector((state) =>
+    state.accounts.accounts.find((acc) => acc.id === id),
+  );
+  
     const getTitle = () => {
+    if (location.pathname.startsWith("/account/") && account) {
+      return account.name; 
+    }
+
     switch (location.pathname) {
       case "/":
         return "Accounts";
@@ -10,11 +20,11 @@ function Navbar() {
         return "Reports";
       case "/Storage":
         return "Storage";
-       
       default:
         return "Track.com";
     }
   };
+
   return (
     <>
       <div
@@ -34,7 +44,7 @@ function Navbar() {
                          "
       >
         <div className="">
-            <h1 className="text-2xl font-bold">{getTitle()}</h1>
+          <h1 className="text-2xl font-bold">{getTitle()}</h1>
         </div>
         <div className="">
           <ThemeToggle />

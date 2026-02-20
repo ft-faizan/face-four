@@ -28,12 +28,12 @@ function AccountFilter({ sortOption, setSortOption }) {
             setFilterOpen(!filterOpen);
           }
         }}
-        className="px-3 py-2 bg-gray-200 dark:bg-[#2D2E32] rounded flex items-center justify-center cursor-pointer"
+        className="px-3 py-2 bg-gray-200 rounded flex items-center justify-center cursor-pointer"
       >
         {isFiltered ? (
           <FaFilterCircleXmark className="text-red-500" />
         ) : (
-          <FaFilter className="text-[#283FE1]" />
+          <FaFilter className="text-[#283FE1] dark:text-[#27272A]" />
         )}
       </button>
 
@@ -54,7 +54,7 @@ function AccountFilter({ sortOption, setSortOption }) {
               setSortOption("nameAsc");
               setFilterOpen(false);
             }}
-            className="block w-full text-left px-4 py-2 hover:bg-[#283FE1] hover:text-white rounded-lg cursor-pointer "
+            className="block w-full text-left px-4 py-2 hover:bg-[#283FE1] dark:hover:bg-[#5D5D62] hover:text-white rounded-lg cursor-pointer "
           >
             <div className="flex items-center gap-1">
             <TbArrowsUpDown />Name Ascending  
@@ -66,7 +66,7 @@ function AccountFilter({ sortOption, setSortOption }) {
               setSortOption("nameDesc");
               setFilterOpen(false);
             }}
-            className="block w-full text-left px-4 py-2 hover:bg-[#283FE1] hover:text-white rounded-lg cursor-pointer "
+            className="block w-full text-left px-4 py-2 hover:bg-[#283FE1] hover:text-white rounded-lg cursor-pointer dark:hover:bg-[#5D5D62] "
           >
             <div className="flex items-center gap-1">
            <TbArrowsDownUp /> Name Descending 

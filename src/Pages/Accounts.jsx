@@ -49,18 +49,18 @@ function AccountsPage() {
   return (
     <>
       <div className="w-full min-h-full bg-white dark:bg-[#333334] p-5 rounded-b-lg relative">
-        <div className="flex gap-3 mb-1 bg-[#E1E3F5] dark:bg-[#2D2E32] backdrop-blur-[20px] rounded-xl p-2 border border-white/10">
+        <div className="flex gap-3 mb-1 bg-[#E1E3F5] dark:bg-[#3D3D3E] backdrop-blur-[20px] rounded-xl p-2 border border-white/10">
           <button
             className={`flex-1 py-3 px-5  rounded-lg cursor-pointer  flex justify-center items-center ${
               activeTab === "active"
-                ? " bg-[#3041DC] font-semibold text-white"
+                ? " bg-[#3041DC] dark:bg-[#27272A] font-semibold text-white"
                 : "text-white-50 "
             }`}
             onClick={() => setActiveTab("active")}
           >
            
             Accounts
-            <span className="ml-2 inline-flex items-center justify-center min-w-[22px] h-[22px] bg-[#A8AEE1] dark:bg-[#828284] text-white text-xs font-medium rounded-full px-2 shadow-md">
+            <span className="ml-2 inline-flex items-center justify-center min-w-[22px] h-[22px] bg-[#A7ACDD] dark:bg-[#828284] text-white text-xs font-medium rounded-lg px-2 shadow-md">
               {activeCount}
             </span>
           </button>
@@ -68,14 +68,14 @@ function AccountsPage() {
           <button
             className={`flex-1 py-3 px-5 rounded-lg  cursor-pointer flex justify-center items-center ${
               activeTab === "archived"
-                ? " bg-[#3041DC] font-semibold text-white"
+                ? " bg-[#3041DC] dark:bg-[#27272A]  font-semibold text-white"
                 : "text-white-50"
             }`}
             onClick={() => setActiveTab("archived")}
           >
             Archived 
             {/* ({archivedCount}) */}
-            <span className="ml-2 inline-flex items-center justify-center min-w-[22px] h-[22px] bg-[#A8AEE1] dark:bg-[#828284] text-white text-xs font-medium rounded-full px-2 shadow-md">
+            <span className="ml-2 inline-flex items-center justify-center min-w-[22px] h-[22px] bg-[#A8AEE1] dark:bg-[#828284] text-white text-xs font-medium rounded-lg px-2 shadow-md">
              {archivedCount}
             </span>
           </button>
@@ -141,7 +141,7 @@ function AccountsPage() {
             setEditingAccount(null);
             setIsModalOpen(true);
           }}
-          className="fixed bottom-30 right-10 md:bottom-6  md:right-6 bg-[#283FE1] text-white  md:w-15 md:h-15 w-13 h-13 rounded-full text-2xl shadow-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-200"
+          className="fixed bottom-30 right-10 md:bottom-6  md:right-6 bg-[#283FE1] dark:bg-[#27272A] text-white  md:w-15 md:h-15 w-13 h-13 rounded-full text-2xl shadow-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-200"
         >
           <IoMdAdd />
         </button>
